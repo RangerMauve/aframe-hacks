@@ -13,6 +13,15 @@
 		<a-scene physics="debug: true">
 			<a-assets>
 				<img id="AVulpix" src="../images/alola vulpix.png">
+
+				<script id="penisTemplate">
+					<a-entity dynamic-body="shape: box;" >
+					 <a-sphere position="-0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
+					 <a-sphere position="0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
+					 <a-cylinder position="0 1.54 0" radius="0.7" height="2" color="#A55FA6"></a-cylinder>
+					 <a-sphere position="0 2.5 0" radius="0.72" color="#fc3fb3"></a-sphere>
+					</a-entity>
+		    </script>
 			</a-assets>
 
 			<a-entity
@@ -22,12 +31,9 @@
 				camera="user-height: 1.6"
 				universal-controls></a-entity>
 
-			<a-entity dynamic-body="shape: box;" position="0 1 -5">
-				<a-sphere position="-0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
-				<a-sphere position="0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
-				<a-cylinder position="0 1.54 0" radius="0.7" height="2" color="#A55FA6"></a-cylinder>
-				<a-sphere position="0 2.5 0" radius="0.72" color="#fc3fb3"></a-sphere>
-			</a-entity>
+			<a-entity template="src: #penisTemplate; type: html" position="0 1 -5"/></a-entity>
+			<a-entity template="src: #penisTemplate; type: html" position="10 1 -5"/></a-entity>
+			<a-entity template="src: #penisTemplate; type: html" position="5 1 -10"/></a-entity>
 
 			<a-ocean color="#FA6A55" width="50" depth="50" density="20" opacity="1"></a-ocean>
 
@@ -43,15 +49,12 @@
 					position="0 10 0"
 					scale="0.5 0.5 0.5"></a-entity>
 				<a-entity
-					dynamic-body="shape: box">
-					<a-entity
-						obj-loader="src: url(./Models/Charmander.obj);"
-						material="color: #f99543"
-						scale="0.5 0.5 0.5"
-						position="-2 0 -3"
-						rotation="0 0 0"
-						animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; easing: easeInOutElastic"></a-entity>
-				</a-entity>
+					obj-loader="src: url(./Models/Charmander.obj);"
+					material="color: #f99543"
+					scale="0.5 0.5 0.5"
+					position="-2 0 -3"
+					rotation="0 0 0"
+					animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; easing: easeInOutElastic"></a-entity>
 			</a-entity>
 		</a-scene>
 	</body>
