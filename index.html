@@ -15,10 +15,13 @@
 				<img id="AVulpix" src="../images/alola vulpix.png">
 			</a-assets>
 
-			<a-entity camera="user-height: 1.6" universal-controls></a-entity>
+			<a-entity
+				kinematic-body="shape: sphere;"
+				position="0 5 0"
+				camera="user-height: 1.6"
+				universal-controls></a-entity>
 
-
-			<a-entity dynamic-body="shape: auto;" position="0 1 -5">
+			<a-entity dynamic-body="shape: box;" position="0 1 -5">
 				<a-sphere position="-0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
 				<a-sphere position="0.45 0 0" radius="1" color="#A55FA6"></a-sphere>
 				<a-cylinder position="0 1.54 0" radius="0.7" height="2" color="#A55FA6"></a-cylinder>
