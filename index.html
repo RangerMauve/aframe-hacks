@@ -13,6 +13,9 @@
 		<a-scene physics="debug: true">
 			<a-assets>
 				<img id="AVulpix" src="../images/alola vulpix.png">
+
+				<a-asset-item id="charmander-obj" src="./Models/Charmander.obj"></a-asset-item>
+				<a-asset-item id="charmander-mtl" src="./Models/Hitokage.mtl"></a-asset-item>
 			</a-assets>
 
 			<a-entity
@@ -35,24 +38,27 @@
 
 			<a-sky rotation="0 -90 0" src="#AVulpix"></a-sky>
 
-			<a-entity position="-6 0 -6">
 				<a-entity
 					dynamic-body="shape: box"
 					obj-loader="src: url(./Models/Squirtle.obj);"
 					material="color: #41f4df"
 					position="0 10 0"
 					scale="0.5 0.5 0.5"></a-entity>
+				
 				<a-entity
 					dynamic-body="shape: box">
+
+
+
 					<a-entity
-						obj-loader="src: url(./Models/Charmander.obj);"
-						material="color: #f99543"
+						obj-model="obj: #charmander-obj; mtl: #charmander-mtl"
 						scale="0.5 0.5 0.5"
 						position="-2 0 -3"
 						rotation="0 0 0"
 						animation="property: rotation; to: 0 360 0; dur: 2000; loop: true; easing: easeInOutElastic"></a-entity>
 				</a-entity>
-			</a-entity>
+
+
 		</a-scene>
 	</body>
 
