@@ -15,7 +15,7 @@
 				<img id="AVulpix" src="../images/alola vulpix.png">
 
 				<script id="penisTemplate">
-					<a-entity dynamic-body="shape: box;" >
+					<a-entity  >
 					 <a-sphere position="-0.45 0 0" radius="1" color="#562900"></a-sphere>
 					 <a-sphere position="0.45 0 0" radius="1" color="#562900"></a-sphere>
 					 <a-cylinder position="0 1.54 0" radius="0.7" height="2" color="#562900"></a-cylinder>
@@ -33,9 +33,9 @@
 				camera="user-height: 1.6"
 				universal-controls></a-entity>
 
-			<a-entity template="src: #penisTemplate; type: html" position="0 1 -5"/></a-entity>
-			<a-entity template="src: #penisTemplate; type: html" position="10 1 -5"/></a-entity>
-			<a-entity template="src: #penisTemplate; type: html" position="5 1 -10"/></a-entity>
+			<a-entity template="src: #penisTemplate; type: html" dynamic-body="shape: box;" position="0 1 -5" scale="1 6 1"/></a-entity>
+			<a-entity template="src: #penisTemplate; type: html" dynamic-body="shape: box;" position="10 1 -5"/></a-entity>
+			<a-entity template="src: #penisTemplate; type: html" dynamic-body="shape: box;" position="5 1 -10"/></a-entity>
 
 			<a-ocean color="#FA6A55" width="50" depth="50" density="20" opacity="1"></a-ocean>
 
