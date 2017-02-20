@@ -6,3 +6,5 @@ extras.registerAll();
 
 var physics = require('aframe-physics-system');
 physics.registerAll();
+
+require('aframe-animation-component');
