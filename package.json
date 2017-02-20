@@ -4,7 +4,7 @@
   "version": "0.3.0",
   "license": "MIT",
   "scripts": {
-    "start": "budo --live --verbose --port 3000 --open",
+    "start": "budo index.js:bundle.js --live --verbose --port 3000 --open",
     "deploy": "ghpages",
     "ghpages": "ghpages"
   },
@@ -19,5 +19,9 @@
     "aframe-scene",
     "webvr",
     "vr"
-  ]
+  ],
+  "dependencies": {
+    "aframe-extras": "^3.2.7",
+    "aframe-fps-look-component": "^0.1.1"
+  }
 }
